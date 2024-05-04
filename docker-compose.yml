@@ -1,0 +1,9 @@
+version: "3.6"
+services:
+  builder:
+    build: .
+    command: tail -f /dev/null
+    volumes:
+      - ./wine-src:/wine-src
+      - ./wine64-build:/wine64-build
+      - ./wine32-build:/wine32-build
